@@ -1,3 +1,9 @@
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .img {
     display: flex;
     flex-direction: row;
@@ -6,8 +12,19 @@
     align-items: center;
 }
 
+.navcolor {
+    background-color: #f2682a;
+}
+
+.footercolor {
+    background-color: #222222;
+}
 .mainColor {
     color: #f2682a;
+}
+.btn.mainColor:hover {
+    background-color: #f2682a !important;
+    color: white !important;
 }
 .LogoNav {
     display: block;
@@ -38,4 +55,124 @@
 
 .carousel-item {
     position: relative;
+}
+
+.carousel-caption {
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Optional: Adds a semi-transparent background to the text */
+}
+.carousel-caption h1 {
+    font-size: 2.5rem; /* Adjust as needed */
+}
+
+/* #loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+} */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 767px) {
+    h2 {
+        font-size: 20px;
+    }
+    .nextpage {
+        font-size: 10px;
+    }
+    .pdesc {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    /* Atur teks agar responsif di perangkat mobile dengan lebar maksimum 767px */
+    .carousel-caption h1 {
+        font-size: 24px; /* Ubah ukuran teks sesuai kebutuhan */
+    }
+    .carousel-item .row {
+        flex-direction: column;
+    }
+    .carousel-item .col-md-8,
+    .carousel-item .col-md-4 {
+        width: 100%;
+    }
+
+    .imgEvent {
+        max-width: 50%;
+        height: auto;
+    }
+    /* .card-event {
+        flex-direction: column;
+    } */
+    .tgl {
+        display: none;
+    }
+    .eventname {
+        font-size: 16px;
+    }
+    .ownerName {
+        font-size: 12px;
+    }
+    .descName {
+        font-size: 12px;
+    }
+    .btnEvent {
+        font-size: 10px;
+    }
+    .imgProduct {
+        height: 200px;
+    }
+
+    .mobileCard .ownerProduct {
+        font-size: 10px;
+    }
+    .mobileCard .card-title {
+        font-size: 16px;
+    }
+    .mobileCard .card-text {
+        font-size: 12px;
+    }
+    .mobileCard .box {
+        align-items: center;
+    }
+    .mobileCard .box .price {
+        font-size: 12px;
+    }
+    .mobileCard .box .btndetail {
+        font-size: 12px;
+        padding: 2px 0;
+    }
+    iframe {
+        height: 200px;
+    }
+    .container .second {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

@@ -11,10 +11,15 @@ class Products extends Model
 
     protected $fillable =[
         'product_name',
+        'id_kategori',
         'owner',
         'price',
         'url',
         'desc',
         'image',
+        'contact',
     ];
+    public function kategori(){
+        return $this->belongsTo(Kategori::class, 'id_kategori');
+    }
 }

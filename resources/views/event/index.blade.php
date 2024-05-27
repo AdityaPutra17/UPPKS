@@ -3,8 +3,8 @@
 
 <div class="wrapper">
     <div class="content-wrapper">
-        <div class="container-fluid">
-            <a href="/event/create" class="btn btn-default bg-success text-light m-3">Buat Event</a>
+        <div class="container-fluid pt-5">
+            <a href="/admin/event/create" class="btn btn-default bg-success text-light m-3">Buat Event</a>
             @if(session()->has('success'))
                 <div class="alert alert-success" role="alert">
                     {{session('success')}}

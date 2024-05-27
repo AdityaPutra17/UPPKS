@@ -3,8 +3,8 @@
 
 <div class="wrapper">
     <div class="content-wrapper">
-        <div class="container-fluid my-5 ">
-            <a href="/product/create" class="btn btn-default bg-success text-light mb-3 ">Buat Product</a>
+        <div class="container-fluid pt-5">
+            <a href="/admin/product/create" class="btn btn-default bg-success text-light mb-3 ">Buat Product</a>
             @if(session()->has('success'))
                 <div class="alert alert-success" role="alert">
                     {{session('success')}}
@@ -54,7 +54,7 @@
                         @endforeach
                     @else
                         <tr>
-                            <td colspan="5" class="text-center text-secondary ">Data Produk tidak ada</td>
+                            <td colspan="7" class="text-center text-secondary ">Data Produk tidak ada</td>
                         </tr>
                     @endif
                 </tbody>

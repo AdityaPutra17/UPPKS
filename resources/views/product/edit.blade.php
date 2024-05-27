@@ -19,6 +19,15 @@
                         <label for="product_name" class="form-label">Nama Produk</label>
                         <input name="product_name" type="text" class="form-control form" id="product_name" placeholder="Masukkan Nama barang" value="{{ old('product_name', $product->product_name) }}">
                     </div>
+                    <div class="dropdown mb-3">
+                        <label for="id_kategori">Ketegori :</label>
+                        <select name="id_kategori" id="id_kategori" required>
+                            <option selected disabled>Pilih Shift</option>
+                            @foreach ($kategori as $kategori)
+                                <option value="{{ $kategori->id }}">{{ $kategori->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="mb-3">
                         <label for="owner" class="form-label">Pemilik Produk</label>
                         <input name="owner" id="owner" class="form-control form" placeholder="Masukkan Nama pemilik Produk" value="{{ old('owner', $product->owner) }}">
@@ -27,6 +36,13 @@
                         <label for="price" class="form-label">Harga</label>
                         <div class="input-group">
                             <input type="number" name="price" class="form-control" id="price" placeholder="Masukkan harga" value="{{ old('price', $product->price) }}">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact" class="form-label">Nomor Telephone</label>
+                        <div class="input-group">
+                            <div class="bg-secondary text-center p-1 rounded-start">+62</div>
+                            <input type="number" name="contact" class="form-control" id="contact" placeholder="Masukkan No. Hp" value='{{ old('contact', $product->contact) }}'>
                         </div>
                     </div>
                     <div class="mb-3">

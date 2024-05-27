@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
-use App\Http\Requests\StoreProductsRequest;
-use App\Http\Requests\UpdateProductsRequest;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -16,7 +15,8 @@ class ProductsController extends Controller
     {
         //
         $products = Products::all();
-        return view('product.index', compact('products'));
+        $kategori = Kategori::all();
+        return view('product.index', compact('products', 'kategori'));
     }
 
     /**
@@ -25,7 +25,8 @@ class ProductsController extends Controller
     public function create()
     {
         //
-        return view('product.create');
+        $kategori = Kategori::all();
+        return view('product.create', compact('kategori'));
     }
 
     /**
@@ -37,10 +38,12 @@ class ProductsController extends Controller
         // ddd($request);
         $request->validate([
             'product_name' => 'required',
+            'id_kategori' => 'required|exists:kategoris,id',
             'owner' => 'required',
             'price' => 'required',
             'url' => 'required',
             'desc' => 'required',
+            'contact' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -52,10 +55,12 @@ class ProductsController extends Controller
 
         Products::create([
             'product_name' => $request->product_name,
+            'id_kategori' => $request->id_kategori,
             'owner' => $request->owner,
             'price' => $request->price,
             'url' => $request->url,
             'desc' => $request->desc,
+            'contact' => $request->contact,
             'image' => $image,
         ]);
         return redirect()->route('product.index')->with('success', "berhasil");
@@ -78,7 +83,8 @@ class ProductsController extends Controller
     {
         //
         $product = Products::findOrFail($id);
-        return view('product.edit', compact('product'));
+        $kategori = Kategori::all();
+        return view('product.edit', compact('product' , 'kategori'));
     }
 
     /**
@@ -88,10 +94,12 @@ class ProductsController extends Controller
     {
         $request->validate([
             'product_name' => 'required',
+            'id_kategori' => 'required|exists:kategoris,id',
             'owner' => 'required',
             'price' => 'required',
             'url' => 'required',
             'desc' => 'required',
+            'contact' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -102,10 +110,12 @@ class ProductsController extends Controller
 
         $product->update([
             'product_name' => $request->product_name,
+            'id_kategori' => $request->id_kategori,
             'owner' => $request->owner,
             'price' => $request->price,
             'url' => $request->url,
             'desc' => $request->desc,
+            'contact' => $request->contact,
             'image' => $image,
         ]);
 

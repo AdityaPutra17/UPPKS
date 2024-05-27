@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kategori;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -25,6 +26,18 @@ class DatabaseSeeder extends Seeder
             'name' => "admin",
             'email' => "admin@uppks.com",
             'password' => Hash::make('admin123')
+        ]);
+        Kategori::create([
+            'name' => "makanan"
+        ]);
+        Kategori::create([
+            'name' => "minuman"
+        ]);
+        Kategori::create([
+            'name' => "barang"
+        ]);
+        Kategori::create([
+            'name' => "jasa"
         ]);
     }
 }
