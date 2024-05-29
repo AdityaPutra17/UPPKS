@@ -15,7 +15,7 @@
             <div class="d-flex flex-grow-1 justify-content-center">
                 <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="/">Beranda</a>
+                        <a class="nav-link text-light" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="/profile">Tentang Kami</a>

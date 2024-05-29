@@ -54,6 +54,19 @@
     }
 };
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script >
+const navLinkEls = document.querySelectorAll('.nav-link');
+    const windowPathname = window.location.pathname;
+    const navLinkEls.forEach(navLinkEls => {
+        if (navLinkEls.href.includes(windowPathname)){
+            navLinkEls.classList.add("active")
+        }
+    });
+    </script>
+
+
+
 
 </body>
 </html>

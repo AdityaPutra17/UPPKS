@@ -35,8 +35,8 @@
     </div>
     <div class="row justify-content-between align-items-center my-5" data-aos="fade-left" data-aos-duration="1000">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-3">
-            <h2 class="mainColor fw-bold mb-5">Profil Kami</h2>
-            <p style="text-align: justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi unde modi accusantium et exercitationem mollitia consectetur dolorum, repellat, natus dignissimos tempore perferendis quam repudiandae reiciendis. Hic nihil debitis saepe earum, molestias fugit asperiores recusandae ipsum optio facilis, animi praesentium rem autem voluptatem voluptatibus doloremque, eos vitae omnis possimus libero ab!</p>
+            <h2 class="mainColor fw-bold mb-5">Rapat Bulanan</h2>
+            <p style="text-align: justify">pertemuan rutin yang diadakan untuk para ibu yang tergabung dalam Usaha Peningkatan Pendapatan Keluarga Sejahtera (UPPKS). Pertemuan ini bertujuan untuk membahas berbagai hal terkait dengan pengelolaan usaha, keuangan, dan masalah-masalah lain yang berkaitan dengan kesejahteraan keluarga.</p>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
             <img src="{{asset('assets/img/profile.png')}}" width="100%" alt="">

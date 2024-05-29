@@ -25,12 +25,16 @@
                 <tbody>
                     @if (count($products)>0)
                         @foreach ($products as $index => $product)
+                        @php
+                            $shortDesc = Illuminate\Support\Str::limit($product->desc, 20);
+                            $descOverflow = strlen($product->desc) > 20 ? true : false;
+                        @endphp
                             <tr>
                                 <td>{{$index + 1}}</td>
                                 <td>{{$product->product_name}}</td>
                                 <td>{{$product->owner}}</td>
                                 <td>{{$product->price}}</td>
-                                <td>{{$product->desc}}</td>
+                                <td>{{$shortDesc}}</td>
                                 <td><a href="{{$product->url}}" target="_blank">{{$product->url}}</a></td>
 
                                 <td class="row justify-content-center ">

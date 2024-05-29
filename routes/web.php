@@ -16,8 +16,6 @@ Route::get('/event-page', [HomeController::class, 'showEvent']);
 Route::get('/event/{id}', [HomeController::class, 'detailEvent'])->name('userevent.show');
 Route::get('/product-page', [HomeController::class, 'showProduct']);
 Route::get('/product/{id}', [HomeController::class, 'detailProduct'])->name('userproduct.show');
-Route::get('/products/category/{category_id}', 'HomeController@showProductsByCategory')->name('products.by.category');
-
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'auth']);

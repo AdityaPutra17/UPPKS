@@ -45,6 +45,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link " target="_blank">
+                        <i class="nav-icon fa-solid fa-globe"></i>
+                        <p>
+                            Lihat Tampilan User
+                        </p>
+                    </a>
+                </li>
                 <hr class="border-2 ">
                 <li class="nav-item">
                     <form action="/logout" method="POST" class="nav-link">

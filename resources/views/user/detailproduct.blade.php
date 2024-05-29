@@ -18,7 +18,7 @@
             <h1 class="fw-bold mainColor">RP {{$product->price}}</h1>
             <div class="row my-5 gap-3">
                 <div class="col-5 col-sm-5 col-md-5 col-lg-5 ">
-                    <a href="{{$product->url}}" class="btn mainColor fw-bold rounded-5 px-5 mb-5" style="background-color: white; border-color: #f2682a;" >Order by Shopee</a>
+                    <a href="{{$product->url}}" class="btn mainColor fw-bold rounded-5 px-5 mb-5" style="background-color: white; border-color: #f2682a;" target="_blank">Order by Shopee</a>
                 </div>
                 <div class="col-2 col-sm-2 col-md-2 col-lg-2">
                     <a class="navcolor rounded-5 text-center fs-3 p-1" href="https://api.whatsapp.com/send/?phone=62{{$product->contact}}&text&type=phone_number&app_absent=0" target="_blank">

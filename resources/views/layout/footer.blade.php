@@ -12,16 +12,16 @@
       <div class="mb-5">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row text-center justify-content-center">
           <li class="nav-item me-4">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+            <a class="nav-link " aria-current="page" href="#">Beranda</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="#">Tentang Kami</a>
+            <a class="nav-link" href="/profile">Tentang Kami</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="#">Produk</a>
+            <a class="nav-link" href="/product-page">Produk</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="#">Event</a>
+            <a class="nav-link" href="/event-page">Event</a>
           </li>
         </ul>
       </div>
