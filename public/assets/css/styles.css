@@ -94,7 +94,7 @@
 }
 
 .active {
-    background-color: #ffffff;
+    text-decoration: underline;
 }
 
 /* #loader-wrapper {

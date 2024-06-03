@@ -1,4 +1,4 @@
-<footer class="text-white py-3 footercolor">
+    <footer class="text-white py-3 footercolor">
 
   <div class="container">
     <div class="row">
@@ -12,16 +12,16 @@
       <div class="mb-5">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row text-center justify-content-center">
           <li class="nav-item me-4">
-            <a class="nav-link " aria-current="page" href="#">Beranda</a>
+            <a class="{{ (Route::is('home')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link " aria-current="page" href="/">Beranda</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/profile">Tentang Kami</a>
+            <a class="{{ (Route::is('profile')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link" href="/profile">Tentang Kami</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/product-page">Produk</a>
+            <a class="{{ (Route::is('product-page')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link" href="/product-page">Produk</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/event-page">Event</a>
+            <a class="{{ (Route::is('event-page')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link" href="/event-page">Event</a>
           </li>
         </ul>
       </div>

@@ -16,8 +16,18 @@
           <p class="text-secondary text-center">Jelajahi beragam produk makanan unggulan dari UMKM Desa Bitungsari yang siap memanjakan lidah Anda.</p>
       </div>
 
+      <div class="container my-5">
+        <div class="row text-center justify-content-center">
+            <div class="col-2"><a href="{{ route('product-page') }}" class="text-decoration-none {{ is_null($selectedCategory) ? 'mainColor' : 'text-dark' }}">all</a></div>
+            <div class="col-2"><a href="{{ route('product-kategori', 'makanan') }}" class=" text-decoration-none {{ $selectedCategory == 'makanan' ? 'mainColor' : 'text-dark' }}">Makanan</a></div>
+            <div class="col-2"><a href="{{ route('product-kategori', 'minuman') }}" class=" text-decoration-none {{ $selectedCategory == 'minuman' ? 'mainColor' : 'text-dark' }}">Minuman</a></div>
+            <div class="col-2"><a href="{{ route('product-kategori', 'barang') }}" class=" text-decoration-none {{ $selectedCategory == 'barang' ? 'mainColor' : 'text-dark' }}">Barang</a></div>
+            <div class="col-2"><a href="{{ route('product-kategori', 'jasa') }}" class=" text-decoration-none {{ $selectedCategory == 'jasa' ? 'mainColor' : 'text-dark' }}">jasa</a></div>
+        </div>
+      </div>
+
       <div class="container d-flex justify-content-between my-5">
-          <div class="row row-gap-4 ">
+          <div class="row row-gap-4">
             @foreach ($products as $product )
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                     @php

@@ -35,15 +35,31 @@ class HomeController extends Controller
         return view('user.detailproduct', compact('product'));
     }
 
-    public function showProduct(){
-        $products = Products::paginate(9);
-
-        return view('user.productpage', compact('products'));
-    }
     public function showEvent(){
         $events = Event::all();
 
+
         return view('user.eventpage', compact('events'));
+    }
+    public function showProduct(){
+        $products = Products::paginate(9);
+        $selectedCategory = null;
+
+        return view('user.productpage', compact('products', 'selectedCategory'));
+    }
+
+    public function filterProducts($kategori)
+    {
+        $kategori = Kategori::where('name', $kategori)->first();
+        $selectedCategory = $kategori;
+
+        if ($kategori) {
+            $products = Products::where('id_kategori', $kategori->id)->paginate(9);
+        } else {
+            $products = Products::paginate(9);
+        }
+
+        return view('user.productpage', compact('products', 'selectedCategory'));
     }
 
 }

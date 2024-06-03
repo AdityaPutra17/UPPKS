@@ -15,16 +15,20 @@
             <div class="d-flex flex-grow-1 justify-content-center">
                 <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-light" aria-current="page" href="/">Beranda</a>
+                        <a class="{{ (Route::is('home')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link text-light"
+                            aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="/profile">Tentang Kami</a>
+                        <a class="{{ (Route::is('profile')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link text-light"
+                            href="/profile">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="/product-page">Produk</a>
+                        <a class="{{ (Route::is('product-page')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link text-light"
+                            href="/product-page">Produk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="/event-page">Event</a>
+                        <a class=" {{ (Route::is('event-page')) ? 'text-light fw-bold text-decoration-none active' : '' }} nav-link text-light"
+                            href="/event-page">Event</a>
                     </li>
                 </ul>
             </div>
